@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\usepackage{fontawesome}% http://ctan.org/pkg/fontawesome
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  urlcolor=blue
+}
+
+\name{Chekanov Arseny} % Your name
+\address{5 Krasnogo Mayaka St \\ Moscow 117519 \\ Russia} % Your address
+\address{
+    \faMobile \enspace +7(925)6183765 \\ 
+    \faEnvelopeO \enspace \href{mailto:senya@chekanov.net}{senya@chekanov.net} \\ 
+    \faGithub \enspace \href{https://github.com/SenchoPens}{github.com/SenchoPens}
+}
+\address{
+    \textbf{C++, Python, Golang}, Haskell
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{EDUCATION}
+    \begin{rSubsubsection}{Higher School of Economics, Moscow}{Sep 2020 -- Expected Jun 2024}{Bachelor in Applied Mathematics and Computer Science}{}
+    \end{rSubsubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l}
+        Programming Languages & \textbf{C++, Python, Golang}, Haskell\\
+        Technologies          & MongoDB, Redis, Docker, Protobuf, Linux, Nix and NixOS, REST\\
+        Tools                 & Git, GitHub, CI/CD, Vim\\
+        Human Languages       & \textbf{English: Advanced} (\href{https://github.com/SenchoPens/fabric-docs-i18n/tree/ru_RU}{worked} as a translator), Russian: Native
+    \end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{WORK EXPERIENCE}
+    \begin{rSubsection}{Telegram Bot Developer}{May 2017 -- Oct 2018}{Law Firm <<Stimulus>>}{Moscow, Russia}
+    \item Developed and deployed a \textbf{Python} telegram-bot to provide an interface to real estate register by using it's cluttered \textbf{REST API}. I had to work alone, but I brought the project to completion from ground-up.
+    \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	Personal Projects SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Personal Projects}
+    \begin{rSubsection}{\href{https://gitlab.com/shipr1505/backend}{Shipper}}{Apr 2020}{}{}
+    \item Developed \textbf{Golang Microservices} with \textbf{Protobuf} for user authentification with \textbf{JWT}, integration with a Vkontakte social network by using it's \textbf{API}, application's business logic.
+    \end{rSubsection}
+
+    \begin{rSubsection}{\href{https://gitlab.com/SenchoPens/hatapp}{Hat game}}{May 2019}{}{}
+    \item Implemented an \textbf{Android app} using \textbf{Python} with \textbf{NLP} analysis of Russian National Corpus.
+    \end{rSubsection}
+
+    \begin{rSubsection}{\href{https://github.com/SenchoPens/cloud-bees}{Cloud Bees}}{Nov 2017 -- Mar 2018}{}{}
+    \item Developed a \textbf{distributed CRDT database} using \textbf{Cloud Haskell} with \textbf{elliptic-curve encryption}.
+    \item Wrote an \href{https://github.com/mreluzeon/block-monad}{article} about developing distributed applications with \textbf{Cloud Haskell}.
+    \end{rSubsection}
+
+    \begin{rSubsection}{\href{https://github.com/SenchoPens/bioinformatic}{Searching new D-segments}}{Jun 2017}{}{}
+    \item Analyzed 3 Gb of bioinformatics data with \textbf{Python} in search of new D-segments to find 2 previously undiscovered ones.
+    \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Achievements}
+    \begin{rSubsection}
+        {All-Russian Olympiad in informatics <<Lomonosov>>}{2020}{Gold medalist}{}
+        \item Solved a bunch of theoretical CS tasks faster and better then others with \textbf{C++}.
+    \end{rSubsection}
+
+    \begin{rSubsection}
+        {Digital Transformation of the Charity Sector Summer School}{2019}{\href{https://www.hse.ru/en/news/298686356.html}{Winner}}{}
+    \item Developed a \textbf{Python} telegram bot.
+    \end{rSubsection}
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
