@@ -30,6 +30,15 @@
 \usepackage{titlesec}
 \setlength{\parskip}{3pt}
 \setlength{\parindent}{1em}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=10mm,
+ right=10mm,
+ top=5mm,
+ bottom=5mm,
+ }
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
@@ -113,17 +122,28 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {#3} \hfill {#4} % Italic job title and location
+ \ifthenelse{\equal{#3}{}}{
+    {\bf #1} \hfill {#2} % Bold company name and date on the right
+  }{ % If the third argument is not specified, don't print the job title and location line
+  {\bf #1}, {#3} \hfill \ifthenelse{\equal{#4}{}}{}{{#4}, }{#2} % Bold company name and date on the right
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep -0.3em \vspace{-0.3em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
-}
+  \vspace{0.3em} % Some space after the list of bullet points
+}% \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+%  {\bf #1} \hfill {#2} % Bold company name and date on the right
+%  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
+%   \\
+%   {#3} \hfill {#4} % Italic job title and location
+%   }\smallskip
+%   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+%    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+%   }{
+%   \end{list}
+%   \vspace{0.5em} % Some space after the list of bullet points
+% }
 
 \newenvironment{rSubsubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
  {\bf #1} \hfill {#2} % Bold company name and date on the right
@@ -138,5 +158,5 @@
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\bigskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+\def\nameskip{\smallskip} % The space after your name at the top
+\def\sectionskip{\smallskip} % The space after the heading section

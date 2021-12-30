@@ -22,8 +22,6 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
@@ -37,16 +35,12 @@
 }
 
 \name{Chekanov Arseny} % Your name
-\address{5 Krasnogo Mayaka St \\ Moscow 117519 \\ Russia} % Your address
+\address{Moscow, Russia} % Your address
 \address{
     \faMobile \enspace +7(925)6183765 \\ 
     \faEnvelopeO \enspace \href{mailto:senya@chekanov.net}{senya@chekanov.net} \\ 
     \faGithub \enspace \href{https://github.com/SenchoPens}{github.com/SenchoPens}
 }
-\address{
-    \textbf{C++, Python, Golang}, Haskell
-}
-
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -65,12 +59,26 @@
 \begin{rSection}{Skills}
 
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l}
-        Programming Languages & \textbf{C++, Python, Golang}, Haskell\\
-        Technologies          & MongoDB, Redis, Docker, Protobuf, Linux, Nix and NixOS, REST\\
-        Tools                 & Git, GitHub, CI/CD, Vim\\
-        Human Languages       & \textbf{English: Advanced} (\href{https://github.com/SenchoPens/fabric-docs-i18n/tree/ru_RU}{worked} as a translator), Russian: Native
+        Programming Languages & \textbf{C++, Python, Golang}, Haskell, Bash, Nix, C, Assembly \\
+        Technologies          & \textbf{MongoDB}, Redis, \textbf{Docker}, Protobuf, \textbf{Linux}, NixOS, \textbf{REST API}, SQL, \\
+                              & Hyperledger Fabric, \textbf{Postman}, BDD \\
+        Tools                 & \textbf{Git}, GitHub, CI/CD, Vim, \textbf{Swagger/OpenAPI}\\
+        Human Languages       & \textbf{English: Advanced} (\href{https://github.com/hyperledger/fabric-docs-i18n/pull/80}{worked} as a translator), Russian: Native\\
+        Mathematics           & \textbf{Linear Algebra} (Regressions, SVD), Graph Theory, \textbf{Calculus}, \\
+                              & Abstract Algebra, \textbf{Statistics}, \textbf{Probability Theory}, Topology
     \end{tabular}
 
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{INTERESTS}
+    \begin{tabular}{ @{} >{}l @{\hspace{6ex}} l}
+        Functional and declarative programming (\textbf{Haskell}, Nix)  & \textbf{DevOps} and \textbf{Linux Administration} \\
+        \textbf{Backend} development and \textbf{Parallel programming}         & \textbf{Data Processing} and \textbf{Data Science} \\
+    \end{tabular}
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
@@ -78,8 +86,14 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{WORK EXPERIENCE}
-    \begin{rSubsection}{Telegram Bot Developer}{May 2017 -- Oct 2018}{Law Firm <<Stimulus>>}{Moscow, Russia}
-    \item Developed and deployed a \textbf{Python} telegram-bot to provide an interface to real estate register by using it's cluttered \textbf{REST API}. I had to work alone, but I brought the project to completion from ground-up.
+    \begin{rSubsection}{Software Development Intern}{July -- September 2021}{\href{https://procsy.ru}{JSC ProCSy} (\href{https://infotecs.ru/}{InfoTeCS} group)}{Moscow, Russia}
+    \item Developed in a team a legal-tech \textbf{blockchain Golang web service}, implemented \textbf{JWT} auth, wrote \textbf{MongoDB} queries, \textbf{Swagger/OpenAPI} docs and \textbf{Ginkgo BDD} \& \textbf{Postman} tests, configured \textbf{Docker} deployment.
+    \end{rSubsection}
+    \begin{rSubsection}{Software Developer}{May 2018}{«WOT Express» media}{Moscow, Russia}
+    \item Developed a \textbf{Python} Telegram bot that forwarded posts to Telegram with \textbf{Vk \& Telegram API}.
+    \end{rSubsection}
+    \begin{rSubsection}{Software Developer}{May 2017 -- Oct 2017}{Law Firm <<Stimulus>>}{Moscow, Russia}
+    \item Developed a \textbf{Python} Telegram bot to query real estate register by using it's \textbf{API} and \textbf{Google Maps API} to create geo links. I had to work alone, but I brought the project to completion from ground-up.
     \end{rSubsection}
 \end{rSection}
 
@@ -89,11 +103,11 @@
 
 \begin{rSection}{Personal Projects}
     \begin{rSubsection}{\href{https://gitlab.com/shipr1505/backend}{Shipper}}{Apr 2020}{}{}
-    \item Developed \textbf{Golang Microservices} with \textbf{Protobuf} for user authentification with \textbf{JWT}, integration with a Vkontakte social network by using it's \textbf{API}, application's business logic.
+    \item Developed in a team a \textbf{Dockerized microservice Golang API} with inter-service \textbf{Protobuf} messaging, \textbf{JWT} auth and social network \textbf{API} integration, wrote efficient complex \textbf{MongoDB} pipelines.
     \end{rSubsection}
 
     \begin{rSubsection}{\href{https://gitlab.com/SenchoPens/hatapp}{Hat game}}{May 2019}{}{}
-    \item Implemented an \textbf{Android app} using \textbf{Python} with \textbf{NLP} analysis of Russian National Corpus.
+    \item Implemented an \textbf{Android app} using \textbf{Python} with \textbf{NLP} analysis of Russian National Corpus in a week.
     \end{rSubsection}
 
     \begin{rSubsection}{\href{https://github.com/SenchoPens/cloud-bees}{Cloud Bees}}{Nov 2017 -- Mar 2018}{}{}
@@ -102,7 +116,11 @@
     \end{rSubsection}
 
     \begin{rSubsection}{\href{https://github.com/SenchoPens/bioinformatic}{Searching new D-segments}}{Jun 2017}{}{}
-    \item Analyzed 3 Gb of bioinformatics data with \textbf{Python} in search of new D-segments to find 2 previously undiscovered ones.
+    \item Analyzed 3 Gb of bioinformatics data with \textbf{Python} and \textbf{Matplotlib} to find 2 new D-segments.
+    \end{rSubsection}
+
+    \begin{rSubsection}{Finding tautologies in text}{Feb -- Mar 2017}{}{}
+    \item Used \textbf{word2vec}, \textbf{k-means} and \textbf{ROC curves} to create an algorithm for finding tautologies in text.
     \end{rSubsection}
 \end{rSection}
 
@@ -112,16 +130,30 @@
 
 \begin{rSection}{Achievements}
     \begin{rSubsection}
-        {All-Russian Olympiad in informatics <<Lomonosov>>}{2020}{Gold medalist}{}
-        \item Solved a bunch of theoretical CS tasks faster and better then others with \textbf{C++}.
+        {All-Russian Olympiad in informatics <<Lomonosov>>}{May 2020}
+        {\href{https://drive.google.com/file/d/1IZ79oAVpzXzu7v7-jUK-btdeVrDk8Che/view?usp=sharing}{Gold medalist}}{}
+    \item \textbf{Top 2\% of 189 participants}. Solved CS tasks with \textbf{C++} using \textbf{advanced data structures and algorithms}.
     \end{rSubsection}
 
     \begin{rSubsection}
-        {Digital Transformation of the Charity Sector Summer School}{2019}{\href{https://www.hse.ru/en/news/298686356.html}{Winner}}{}
-    \item Developed a \textbf{Python} telegram bot.
+        {«Digital Transformation of the \textbf{Charity} Sector» IBM \& HSE Summer School}{Jul 2019}
+        {\href{https://www.hse.ru/en/news/298686356.html}{Winner}}{}
+    \item Developed a \textbf{Python} \href{https://github.com/SenchoPens/samumoskva_bot}{Telegram bot} using \textbf{SQLite} for an international \textbf{charity} organization SAMU Social.
     \end{rSubsection}
 \end{rSection}
 
+\begin{rSection}{Voluntary Work}
+    \begin{rSubsection}{Contributor of open-source projects}{June 2020 -- preset}{}{}
+    \item I contribute to open source projects either by writing
+        \href{https://github.com/darkkeks/kks/pull/125/files}{code} or
+        \href{https://github.com/hyperledger/fabric-docs-i18n/pull/80}{documentation},
+        \href{https://github.com/search?q=is\%3Aopen+is\%3Aissue+author\%3ASenchoPens+archived\%3Afalse&type=}{opening issues},
+        or \href{https://opencollective.com/guest-d7d943a1}{donating money}.
+    \end{rSubsection}
+    \begin{rSubsection}{Teacher at a math club}{Sep 2018 -- May 2019}{}{}
+    \item As a high-school student, teached extracurricular math to fifth- and sixth-graders.
+    \end{rSubsection}
+\end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	EXAMPLE SECTION
