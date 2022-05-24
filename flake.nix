@@ -13,7 +13,7 @@
           nativeBuildInputs = with pkgs; [ 
             (texlive.combine {
               inherit (pkgs.texlive) scheme-small collection-langcyrillic preprint invoice
-              collection-fontsrecommended collection-latexrecommended latexmk titlesec fontawesome;
+              collection-fontsrecommended collection-latexrecommended latexmk titlesec fontawesome wrapfig;
           })
         ];
       };

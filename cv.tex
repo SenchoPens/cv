@@ -16,18 +16,14 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass{resume}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
-\usepackage{xcolor}% http://ctan.org/pkg/xcolor
-\usepackage{hyperref}% http://ctan.org/pkg/hyperref
-\usepackage{fontawesome}% http://ctan.org/pkg/fontawesome
+\usepackage{xcolor} % http://ctan.org/pkg/xcolor
+\usepackage{hyperref} % http://ctan.org/pkg/hyperref
+\usepackage{fontawesome} % http://ctan.org/pkg/fontawesome
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!50!red,
@@ -37,27 +33,38 @@
 \name{Chekanov Arseny} % Your name
 \address{Moscow, Russia} % Your address
 \address{
-    \faMobile \enspace +7(925)6183765 \\ 
     \faEnvelopeO \enspace \href{mailto:senya@chekanov.net}{senya@chekanov.net} \\ 
     \faGithub \enspace \href{https://github.com/SenchoPens}{github.com/SenchoPens}
 }
+
+\newif\iffinance
+\newif\ifresearch
+\newif\ifenterprise
+
+% \financetrue
+\researchtrue
+% \enterprisetrue
+
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{EDUCATION}
-    \begin{rSubsubsection}{Higher School of Economics, Moscow}{Sep 2020 -- Expected Jun 2024}{Bachelor in Applied Mathematics and Computer Science}{}
+    \begin{rSubsubsection}
+        {Higher School of Economics, Moscow}
+            {Sep 2020 -- Expected Jun 2024}
+        {Bachelor in Applied Mathematics and Computer Science}
+            {\textbf{GPA}: 8.51}
     \end{rSubsubsection}
+    \iffinance
+        \begin{rSubsubsection}
+            {Higher School of Economics, Moscow}
+                {Sep 2021 -- Expected Jun 2023}
+            {Minor in Financial Markets and Financial Institutes}
+                {}
+        \end{rSubsubsection}
+    \fi
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{Skills}
-
     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l}
         Programming Languages & \textbf{C++, Python, Golang}, Haskell, Bash, Nix, C, Assembly \\
         Technologies          & \textbf{MongoDB}, Redis, \textbf{Docker}, Protobuf, \textbf{Linux}, NixOS, \textbf{REST API}, SQL, \\
@@ -67,104 +74,138 @@
         Mathematics           & \textbf{Linear Algebra} (Regressions, SVD), Graph Theory, \textbf{Calculus}, \\
                               & Abstract Algebra, \textbf{Statistics}, \textbf{Probability Theory}, Topology
     \end{tabular}
-
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
 
 \begin{rSection}{INTERESTS}
     \begin{tabular}{ @{} >{}l @{\hspace{6ex}} l}
-        Functional and declarative programming (\textbf{Haskell}, Nix)  & \textbf{DevOps} and \textbf{Linux Administration} \\
-        \textbf{Backend} development and \textbf{Parallel programming}         & \textbf{Data Processing} and \textbf{Data Science} \\
+        Functional and declarative programming (\textbf{Haskell}, Nix)
+      &
+        \textbf{Backend} development and \textbf{DevOps}
+      \\
+        \textbf{Topological Data Analysis}
+      &
+        \iffinance
+          Quantative analysis
+        \fi
+        \ifresearch
+          \textbf{Neuroinformatics} and Theory of Computation
+        \fi
+        \ifenterprise
+          Mathematical Modelling and Applied \textbf{Statistics}
+        \fi
+      \\
     \end{tabular}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{WORK EXPERIENCE}
-    \begin{rSubsection}{Software Development Intern}{July -- September 2021}{\href{https://procsy.ru}{JSC ProCSy} (\href{https://infotecs.ru/}{InfoTeCS} group)}{Moscow, Russia}
-    \item Developed in a team a legal-tech \textbf{blockchain Golang web service}, implemented \textbf{JWT} auth, wrote \textbf{MongoDB} queries, \textbf{Swagger/OpenAPI} docs and \textbf{Ginkgo BDD} \& \textbf{Postman} tests, configured \textbf{Docker} deployment.
+    \begin{rSubsection}
+        {Software Development Intern}
+            {July -- September 2021}
+        {\href{https://procsy.ru}{JSC ProCSy} (\href{https://infotecs.ru/}{InfoTeCS} group)}
+            {Moscow, Russia}
+
+    \item Developed in a team a legal-tech \textbf{blockchain Golang web
+      service}, implemented \textbf{JWT} auth, wrote \textbf{MongoDB} queries,
+      \textbf{Swagger/OpenAPI} docs and \textbf{Ginkgo BDD} \& \textbf{Postman}
+      tests, configured \textbf{Docker} deployment.
     \end{rSubsection}
-    \begin{rSubsection}{Software Developer}{May 2018}{«WOT Express» media}{Moscow, Russia}
-    \item Developed a \textbf{Python} Telegram bot that forwarded posts to Telegram with \textbf{Vk \& Telegram API}.
-    \end{rSubsection}
-    \begin{rSubsection}{Software Developer}{May 2017 -- Oct 2017}{Law Firm <<Stimulus>>}{Moscow, Russia}
-    \item Developed a \textbf{Python} Telegram bot to query real estate register by using it's \textbf{API} and \textbf{Google Maps API} to create geo links. I had to work alone, but I brought the project to completion from ground-up.
+
+    \begin{rSubsection}
+        {Software Developer}
+            {May 2017 -- Oct 2017}
+        {Law Firm <<Stimulus>>}
+            {Moscow, Russia}
+
+    \item Developed a \textbf{Python} Telegram bot to query real estate register by using it's \textbf{API} and \textbf{Google Maps API}.
     \end{rSubsection}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	Personal Projects SECTION
-%----------------------------------------------------------------------------------------
+\begin{rSection}{Projects}
+    \begin{rSubsection}
+        {\href{https://drive.google.com/file/d/1HGRlRsa_UH2BsYTqJZ3_i_11xEufgxIt/view?usp=sharing}{Neuroinformatics and topology of neural activity}}
+            {Nov 2021 -- present}{}{}
 
-\begin{rSection}{Personal Projects}
-    \begin{rSubsection}{\href{https://gitlab.com/shipr1505/backend}{Shipper}}{Apr 2020}{}{}
-    \item Developed in a team a \textbf{Dockerized microservice Golang API} with inter-service \textbf{Protobuf} messaging, \textbf{JWT} auth and social network \textbf{API} integration, wrote efficient complex \textbf{MongoDB} pipelines.
+    \item Implemented \textbf{mathematical modelling} -- \textbf{topological data analysis}
+      parallelised extensible pipeline with
+      step-by-step \textbf{visualization} that helps to understand
+      how brain learns and encodes the physical environment.
     \end{rSubsection}
 
-    \begin{rSubsection}{\href{https://gitlab.com/SenchoPens/hatapp}{Hat game}}{May 2019}{}{}
+    \begin{rSubsection}
+        {\href{https://gitlab.com/shipr1505/backend}{Shipper}}
+            {Apr 2020}{}{}
+
+    \item Developed in a team a \textbf{Dockerized microservice Golang API} with inter-service \textbf{Protobuf} messaging,
+      \textbf{JWT} auth and social network \textbf{API} integration, wrote efficient complex \textbf{MongoDB} pipelines.
+    \end{rSubsection}
+
+    \begin{rSubsection}
+        {\href{https://gitlab.com/SenchoPens/hatapp}{Hat game}}
+            {May 2019}{}{}
+
     \item Implemented an \textbf{Android app} using \textbf{Python} with \textbf{NLP} analysis of Russian National Corpus in a week.
     \end{rSubsection}
 
-    \begin{rSubsection}{\href{https://github.com/SenchoPens/cloud-bees}{Cloud Bees}}{Nov 2017 -- Mar 2018}{}{}
+    \begin{rSubsection}
+        {\href{https://github.com/SenchoPens/cloud-bees}{Cloud Bees}}
+            {Nov 2017 -- Mar 2018}{}{}
+
     \item Developed a \textbf{distributed CRDT database} using \textbf{Cloud Haskell} with \textbf{elliptic-curve encryption}.
     \item Wrote an \href{https://github.com/mreluzeon/block-monad}{article} about developing distributed applications with \textbf{Cloud Haskell}.
     \end{rSubsection}
 
-    \begin{rSubsection}{\href{https://github.com/SenchoPens/bioinformatic}{Searching new D-segments}}{Jun 2017}{}{}
+    \begin{rSubsection}
+        {\href{https://github.com/SenchoPens/bioinformatic}{Searching for new D-segments}}
+            {Jun 2017}{}{}
+
     \item Analyzed 3 Gb of bioinformatics data with \textbf{Python} and \textbf{Matplotlib} to find 2 new D-segments.
     \end{rSubsection}
 
-    \begin{rSubsection}{Finding tautologies in text}{Feb -- Mar 2017}{}{}
+    \begin{rSubsection}
+        {Finding tautologies in text}
+            {Feb -- Mar 2017}{}{}
+
     \item Used \textbf{word2vec}, \textbf{k-means} and \textbf{ROC curves} to create an algorithm for finding tautologies in text.
     \end{rSubsection}
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	ACHIEVEMENTS SECTION
-%----------------------------------------------------------------------------------------
-
 \begin{rSection}{Achievements}
     \begin{rSubsection}
-        {All-Russian Olympiad in informatics <<Lomonosov>>}{May 2020}
+        {All-Russian Olympiad in informatics <<Lomonosov>>}
+            {May 2020}
         {\href{https://drive.google.com/file/d/1IZ79oAVpzXzu7v7-jUK-btdeVrDk8Che/view?usp=sharing}{Gold medalist}}{}
+
     \item \textbf{Top 2\% of 189 participants}. Solved CS tasks with \textbf{C++} using \textbf{advanced data structures and algorithms}.
     \end{rSubsection}
 
     \begin{rSubsection}
-        {«Digital Transformation of the \textbf{Charity} Sector» IBM \& HSE Summer School}{Jul 2019}
+        {«Digital Transformation of the \textbf{Charity} Sector» IBM \& HSE Summer School}
+            {Jul 2019}
         {\href{https://www.hse.ru/en/news/298686356.html}{Winner}}{}
-    \item Developed a \textbf{Python} \href{https://github.com/SenchoPens/samumoskva_bot}{Telegram bot} using \textbf{SQLite} for an international \textbf{charity} organization SAMU Social.
+
+    \item Developed a \textbf{Python} \href{https://github.com/SenchoPens/samumoskva_bot}{Telegram bot}
+      using \textbf{SQLite} for an international \textbf{charity} organization SAMU Social.
     \end{rSubsection}
 \end{rSection}
 
 \begin{rSection}{Voluntary Work}
-    \begin{rSubsection}{Contributor of open-source projects}{June 2020 -- preset}{}{}
+    \begin{rSubsection}
+        {Contributor of open-source projects}
+            {June 2020 -- preset}{}{}
+
     \item I contribute to open source projects either by writing
-        \href{https://github.com/darkkeks/kks/pull/125/files}{code} or
-        \href{https://github.com/hyperledger/fabric-docs-i18n/pull/80}{documentation},
-        \href{https://github.com/search?q=is\%3Aopen+is\%3Aissue+author\%3ASenchoPens+archived\%3Afalse&type=}{opening issues},
-        or \href{https://opencollective.com/guest-d7d943a1}{donating money}.
+      \href{https://github.com/darkkeks/kks/pull/125/files}{code} or
+      \href{https://github.com/hyperledger/fabric-docs-i18n/pull/80}{documentation},
+      \href{https://github.com/search?q=is\%3Aopen+is\%3Aissue+author\%3ASenchoPens+archived\%3Afalse&type=}{opening issues},
+      or \href{https://opencollective.com/guest-d7d943a1}{donating money}.
     \end{rSubsection}
-    \begin{rSubsection}{Teacher at a math club}{Sep 2018 -- May 2019}{}{}
+
+    \begin{rSubsection}
+        {Teacher at a math club}
+            {Sep 2018 -- May 2019}{}{}
+
     \item As a high-school student, teached extracurricular math to fifth- and sixth-graders.
     \end{rSubsection}
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%\begin{rSection}{Section Name}
-
-%Section content\ldots
-
-%\end{rSection}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
